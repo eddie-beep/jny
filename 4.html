@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagination</title>
+    <link rel="stylesheet" href="2.css">
+</head>
+<body>
+    <div class="opaque-container">
+        <h1>Things I want to do with you! ✨<h3>(Click for more details! Warning!)</h3></h1>
+        <ul class="dream-list">
+            <li onclick="toggleContent('travel')">
+                Not 🤺
+                <p id="travel" class="hidden-content">Imagine sword fighting omg, NONONONO! Denied!!!</p>
+            </li>
+            <li onclick="toggleContent('sunset')">
+                🏊
+                <p id="sunset" class="hidden-content">Picture us on a swimming pool alone, and we decide skinny dipping :o watching our faces turn red as we both get exhausted from all that exercise. (You never know if we might huff & puff from all that work out)</p>
+            </li>
+            <li onclick="toggleContent('roadtrip')">
+                🚿
+                <p id="roadtrip" class="hidden-content">Just the two of us, dancing in the rain (indoors), feeling carefree and happy, not worrying about anything else except admiring all of you! (Specifically fulkumaris 😏)</p>
+            </li>
+            <li onclick="toggleContent('movie')">
+                🎬
+                <p id="movie" class="hidden-content">Snuggled up under a warm blanket, binge-watching movies that I have been gatekeeping to watch with you, with popcorn and your favorite snacks. (Aubergine Included 😏) </p>
+            </li>
+            <li onclick="toggleContent('dinner')">
+                🍝
+                <p id="dinner" class="hidden-content">I'll propose this right after the previous one. I'm gonna cook something for you probably corn cheese and since this is right after the previous activity, (I might be all hot and steamy and shirtless for you to enjoy the view! 😏)</p>
+            </li>
+            <li onclick="toggleContent('dance')">
+                🎀
+                <p id="dance" class="hidden-content">The first thing I'm gonna buy for you when I come back, (Imagine all the possibilities with it, just thinking about it is interesting OMG! 😨) </p>
+            </li>
+            <li onclick="toggleContent('hobbies')">
+                💍 (Proceed with caution on this one!)
+                <p id="hobbies" class="hidden-content">I shouldn't be naughty always, need to be serious sometimes you know. Why not try tying the knot soon? I love you Jennie ❤️</p>
+            </li>
+            <li onclick="toggleContent('future')">
+                ✔️
+                <div id="future" class="hidden-content">
+                    <p>Here are Things we already accomplished:</p>
+                    <ul class="nested-list">
+                        <li>Talked in a deadly manner 😈😈</li>
+                        <li>Watched 👔, 📅 & 5️⃣0️⃣</li>
+                        <li>Invited each other 🚿</li>
+                        <li>Changed the states of matter 💦</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <p class="message">
+            Looking forward to do all these with you! ❤️
+        </p>
+        <a href="index.html">Go to home page</a>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            var listItem = content.closest('li');
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                listItem.style.height = '40px'; // Reset height when closing
+                listItem.classList.remove('show-content');
+            } else {
+                content.style.display = "block";
+                var contentHeight = content.scrollHeight;
+                listItem.style.height = (contentHeight + 40) + 'px'; // Adjust height dynamically
+                listItem.classList.add('show-content');
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>
